@@ -1,0 +1,8 @@
+.element__like {
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/element/Vector.svg);
+  background-position: 50%;
+  border: none;
+  background-color: #fff;
+}

@@ -1,0 +1,14 @@
+.popap__content {
+  background-color: #fff;
+  color: #000;
+  min-width: min(430px, 72vw);
+  padding: 34px 36px 36px 37px;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 790px) {
+  .popap__content {
+    padding: 25px 22px 25px 22px;
+  }
+}

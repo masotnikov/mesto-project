@@ -1,0 +1,10 @@
+.profile__title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+@media screen and (max-width: 380px) {
+  .profile__title {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,53 @@
+/* normalize и вспомогательные блоки */
+
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+
+/* секция header */
+
+@import url(../blocks/page/page.css);
+@import url(../blocks/page/__container/page__container.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+
+/* секция profile */
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__title/profile__title.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__description/profile__description.css);
+@import url(../blocks/profile/__wide-button/profile__wide-button.css);
+
+/* секция elements */
+
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__photo/element__photo.css);
+@import url(../blocks/element/__description/element__description.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__like/element__like.css);
+
+/* секция footer */
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+/* секция popap */
+
+@import url(../blocks/popap/popap.css);
+@import url(../blocks/popap/__body/popap__body.css);
+@import url(../blocks/popap/__content/popap__content.css);
+@import url(../blocks/popap/__close/popap__close.css);
+@import url(../blocks/popap/__title/popap__title.css);
+@import url(../blocks/popap/__form/popap__form.css);
+@import url(../blocks/popap/__input/popap__input.css);
+@import url(../blocks/popap/__button/popap__button.css);
+
+
+
+
+

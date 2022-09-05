@@ -1,0 +1,14 @@
+.popap__body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 19px;
+}
+
+@media screen and (max-width: 380px) {
+  .popap__body {
+    align-items: flex-start;
+    padding-top: 123px;
+  }
+}
