@@ -1,6 +1,9 @@
 .element__descriptoin {
+  font-family: 'Inter';
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 25px 15px 31px 15px;
+  box-sizing: border-box;
 }

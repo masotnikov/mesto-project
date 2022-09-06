@@ -19,6 +19,6 @@
   }
 }
 .popap__close:hover {
-  opacity: 0.7;
+  opacity: 0.5;
   transition: 0.4s ease;
 }
