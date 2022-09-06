@@ -1,4 +1,4 @@
-.popap__body {
+.popup__body {
   min-height: 100%;
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 380px) {
-  .popap__body {
+  .popup__body {
     align-items: flex-start;
     padding-top: 123px;
   }

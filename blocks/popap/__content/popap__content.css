@@ -1,4 +1,4 @@
-.popap__content {
+.popup__content {
   background-color: #fff;
   color: #000;
   min-width: min(430px, 72vw);
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 @media screen and (max-width: 790px) {
-  .popap__content {
+  .popup__content {
     padding: 25px 22px 25px 22px;
   }
 }
