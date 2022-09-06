@@ -3,13 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 19px;
 }
 
-/* @media screen and (max-width: 380px) {
-  .popup__body {
-    align-items: flex-start;
-    padding-top: 123px;
-  }
-}
- */
+
