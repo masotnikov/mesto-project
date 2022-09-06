@@ -1,4 +1,4 @@
-.element__descriptoin {
+.element__description {
   font-family: 'Inter';
   width: 100%;
   display: flex;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
  @media screen and (max-width: 790px) {
-  .element__descriptoin {
+  .element__description {
     padding: 24px 19px 27px;
   }
  }
