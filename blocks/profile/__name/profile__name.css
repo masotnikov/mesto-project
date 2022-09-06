@@ -13,5 +13,6 @@
   .profile__name {
     font-size: 27px;
     line-height: 121%;
+    padding-left: 21px;
   }
 }
