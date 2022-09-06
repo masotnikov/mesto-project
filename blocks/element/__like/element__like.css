@@ -5,4 +5,5 @@
   background-position: 50%;
   border: none;
   background-color: #fff;
+  flex-shrink: 0;
 }
