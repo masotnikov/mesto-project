@@ -4,6 +4,12 @@
   background-image: url(../../../images/element/Vector.svg);
   background-position: 50%;
   border: none;
-  background-color: #fff;
   flex-shrink: 0;
+  transition: .4s ease;
+  cursor: pointer;
+}
+
+.element__like:hover {
+  opacity: 0.5;
+  transition: .4s ease;
 }

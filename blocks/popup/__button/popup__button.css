@@ -3,7 +3,7 @@
   font-family: "Inter";
   border: none;
   color: #fff;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
   font-size: 18px;
   font-weight: 400;
   line-height: 122%;
@@ -12,6 +12,7 @@
   border-radius: 2px;
   transition: 0.4s;
   padding: 0;
+  cursor: pointer;
 }
 @media screen and (max-width: 790px) {
   .popup__button {
@@ -20,6 +21,6 @@
   }
 }
 .popup__button:hover {
-  opacity: 0.5;
+  opacity: 0.6;
   transition: 0.4s ease;
 }
