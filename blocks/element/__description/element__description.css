@@ -1,5 +1,5 @@
 .element__description {
-  font-family: 'Inter';
+  font-family: 'Inter', Arial, sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-between;

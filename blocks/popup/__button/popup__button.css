@@ -1,6 +1,6 @@
 .popup__button {
   height: 50px;
-  font-family: 'Inter';
+  font-family: 'Inter', Arial, sans-serif;
   border: none;
   color: #fff;
   background-color: #000;
