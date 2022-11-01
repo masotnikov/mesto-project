@@ -31,6 +31,7 @@
 @import url(../blocks/element/__title/element__title.css);
 @import url(../blocks/element/__like/element__like.css);
 @import url(../blocks/element/__like/element__like_active/element__like_active.css);
+@import url(../blocks/element/__trash/element__trash.css);
 
 /* секция footer */
 
