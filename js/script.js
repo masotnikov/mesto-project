@@ -96,8 +96,7 @@ closedImageButton.addEventListener('click', () => {
 const buttonLike = document.querySelectorAll('.element__like');
 for(let i = 0; i < buttonLike.length; i++) {
   buttonLike[i].addEventListener('click', function (evt) {
-    const eventTarget = evt.target;
-    eventTarget.classList.toggle('element__like_active');
+    evt.target.classList.toggle('element__like_active');
   })
 }
 
