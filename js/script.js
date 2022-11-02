@@ -34,7 +34,7 @@ const addImageButton = document.querySelector('.profile__wide-button');
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__description");
 const popupButtonClose = document.querySelector(".popup__close");
-const formElement = document.querySelector(".popup__form");
+
 const nameInput = document.querySelector(".popup__inpute-name");
 const jobInput = document.querySelector(".popup__inpute-about");
 
@@ -67,8 +67,9 @@ popupButtonClose.addEventListener('click', () => {
 
 
 // Обработчик «отправки» формы
+const formProfile = document.querySelector(".popup__form");
 
-function handleFormSubmit(evt) {
+function FormSubmitProfile(evt) {
   evt.preventDefault();
 
   profileName.textContent = nameInput.value;
@@ -78,7 +79,7 @@ function handleFormSubmit(evt) {
   popupClosed(popupProfile);
 }
 
-formElement.addEventListener("submit", handleFormSubmit);
+formProfile.addEventListener("submit", FormSubmitProfile);
 
 //открытие попап Image
 const popupImage = document.querySelector('#popup-image');
@@ -100,4 +101,35 @@ for(let i = 0; i < buttonLike.length; i++) {
   })
 }
 
+const buttonTrash = document.querySelectorAll('.element__trash');
+for (let i = 0; i < buttonTrash.length; i++) {
+  buttonTrash[i].addEventListener('click', function (evt) {
+    evt.target.closest('.element').remove();
+  })
+}
 
+function addImage (titleValue, linkValue) {
+  const gridContainer = document.querySelector('.elements');
+  const gridTemplate = document.querySelector('#grid-template').content;
+  const gridElement = gridTemplate.querySelector('.element').cloneNode(true);
+  gridElement.querySelector('.element__title').textContent = titleValue;
+  gridElement.querySelector('.element__photo').src = linkValue;
+  gridElement.querySelector('.element__photo').alt = titleValue;
+  gridContainer.prepend(gridElement);
+}
+
+const buttonAddImage = document.querySelector('#button-add-image');
+
+const formImage = document.querySelector('.popup__form-image');
+
+function FormSubmitImage(evt) {
+  evt.preventDefault();
+
+  let title = document.querySelector('#input-title');
+  let src = document.querySelector('#input-src');
+  addImage(title.value, src.value);
+
+  popupClosed(popupImage);
+}
+
+formImage.addEventListener("submit", FormSubmitImage);

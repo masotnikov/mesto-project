@@ -6,11 +6,11 @@
   background-color: transparent;
   border: none;
   flex-shrink: 0;
-  transition: .4s ease;
+  transition: .1s ease;
   cursor: pointer;
 }
 
 .element__like:hover {
   opacity: 0.5;
-  transition: .4s ease;
+  transition: .1s ease;
 }
