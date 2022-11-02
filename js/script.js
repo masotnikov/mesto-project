@@ -81,33 +81,21 @@ function FormSubmitProfile(evt) {
 
 formProfile.addEventListener("submit", FormSubmitProfile);
 
-//открытие попап Image
+//открытие попап addImage
 const popupImage = document.querySelector('#popup-image');
 addImageButton.addEventListener('click', () => {
   popupOpened(popupImage);
 })
 
-//закрытие попап Image
+//закрытие попап addImage
 
 const closedImageButton = document.querySelector('#close-image');
 closedImageButton.addEventListener('click', () => {
   popupClosed(popupImage);
 })
 
-const buttonLike = document.querySelectorAll('.element__like');
-for(let i = 0; i < buttonLike.length; i++) {
-  buttonLike[i].addEventListener('click', function (evt) {
-    evt.target.classList.toggle('element__like_active');
-  })
-}
 
-const buttonTrash = document.querySelectorAll('.element__trash');
-for (let i = 0; i < buttonTrash.length; i++) {
-  buttonTrash[i].addEventListener('click', function (evt) {
-    evt.target.closest('.element').remove();
-  })
-}
-
+// функция добавления карточки
 function addImage (titleValue, linkValue) {
   const gridContainer = document.querySelector('.elements');
   const gridTemplate = document.querySelector('#grid-template').content;
@@ -118,10 +106,25 @@ function addImage (titleValue, linkValue) {
   gridContainer.prepend(gridElement);
 }
 
+//функция удаления карточки
+const buttonTrash = document.querySelectorAll('.element__trash');
+for (let i = 0; i < buttonTrash.length; i++) {
+  buttonTrash[i].addEventListener('click', function (evt) {
+    evt.target.closest('.element').remove();
+  })
+}
+
+//переключение лайков/дизлайков
+const buttonLike = document.querySelectorAll('.element__like');
+for(let i = 0; i < buttonLike.length; i++) {
+  buttonLike[i].addEventListener('click', function (evt) {
+    evt.target.classList.toggle('element__like_active');
+  })
+}
+
+// обработчик формы добавления картинок
 const buttonAddImage = document.querySelector('#button-add-image');
-
 const formImage = document.querySelector('.popup__form-image');
-
 function FormSubmitImage(evt) {
   evt.preventDefault();
 
