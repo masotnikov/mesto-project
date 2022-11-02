@@ -4,6 +4,7 @@
   background-image: url(../../../images/element/Vector.svg);
   background-position: 50%;
   background-color: transparent;
+  background-repeat: no-repeat;
   border: none;
   flex-shrink: 0;
   transition: .1s ease;
