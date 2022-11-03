@@ -127,16 +127,18 @@ for (let i = 0; i < buttonLike.length; i++) {
 // обработчик формы добавления картинок
 const buttonAddImage = document.querySelector("#button-add-image");
 const formImage = document.querySelector(".popup__form-image");
+
 function FormSubmitImage(evt) {
   evt.preventDefault();
-
   let title = document.querySelector("#input-title");
   let src = document.querySelector("#input-src");
-  addImage(title.value, src.value);
 
+  addImage(title.value, src.value);
   popupClosed(popupImage);
-  title.value = '';
+
+  title.value= '';
   src.value = '';
 }
 
 formImage.addEventListener("submit", FormSubmitImage);
+
