@@ -2,4 +2,5 @@
   visibility: visible;
   opacity: 1;
   transition: visibility .2s, opacity .2s ease-out;
+  position: fixed;
 }

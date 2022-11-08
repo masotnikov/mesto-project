@@ -90,27 +90,41 @@
       <footer class="footer">
         <p class="footer__copyright">© 2022 Mesto Russia</p>
       </footer>
+      <!-- попап proFile -->
       <div class="popup" id="popup-profile">
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h2 class="popup__title">Редактировать профиль</h2>
           <form name="form-edit" action="#" class="popup__form">
-            <input name="name" type="text" class="popup__input popup__inpute-name" id="input-name" autocomplete="off" required>
-            <input name="about" type="text" class="popup__input popup__inpute-about" id="about-name" autocomplete="off" required>
+            <input name="name" type="text" class="popup__input popup__inpute-name" id="input-name" autocomplete="off"
+              required>
+            <input name="about" type="text" class="popup__input popup__inpute-about" id="about-name" autocomplete="off"
+              required>
             <button type="submit" class="popup__button">Сохранить</button>
           </form>
         </div>
       </div>
+      <!-- попап addImage -->
       <div class="popup" id="popup-image">
         <div class="popup__content">
           <button type="button" class="popup__close" id="close-image"></button>
           <h2 class="popup__title">Новое место</h2>
           <form name="form-edit" action="#" class="popup__form popup__form-image">
-            <input name="name" type="text" class="popup__input popup__inpute-name" id="input-title" placeholder="Название" required>
-            <input name="about" type="url" class="popup__input popup__inpute-about" id="input-src" placeholder="Ссылка на картинку" required>
+            <input name="name" type="text" class="popup__input popup__inpute-name" id="input-title"
+              placeholder="Название" required>
+            <input name="about" type="url" class="popup__input popup__inpute-about" id="input-src"
+              placeholder="Ссылка на картинку" required>
             <button type="submit" class="popup__button" id="button-add-image">Сохранить</button>
           </form>
         </div>
+      </div>
+      <!-- попап Photo -->
+      <div class="photo popup" id="popup-photo">
+        <figure class="photo__figure">
+            <button class="photo__close popup__close"  type="button" id="close-photo"></button>
+            <img class="photo__image" src="#" alt="#">
+            <figcaption class="photo__caption"></figcaption>
+        </figure>
       </div>
     </div>
   </div>

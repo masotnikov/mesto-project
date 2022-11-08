@@ -48,3 +48,11 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+
+
+/* секция popup Photo */
+
+@import url(../blocks/photo/photo.css);
+@import url(../blocks/photo/__close/photo__close.css);
+@import url(../blocks/photo/__figure/photo__figure.css);
+@import url(../blocks/photo/__image/photo__image.css);
