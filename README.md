@@ -11,7 +11,7 @@
 * Grid CSS
 * JavaScript
 
-Расширить функционал чайта и проработать backend часть.
+Расширить функционал cайта и проработать backend часть.
 
 Ссылка на сайт: https://masotnikov.github.io/mesto-project/
 
