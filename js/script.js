@@ -74,23 +74,25 @@ addImageButton.addEventListener("click", () => {
 //карточки из коробки
 const gridContainer = document.querySelector(".elements");
 const gridTemplate = document.querySelector("#grid-template").content;
-const placeInfo = initialCards.map(function (item) {
+const cardCollection = initialCards.map(function (el) {
   return {
-    name: item.name,
-    link: item.link,
+    title: el.name,
+    link: el.link,
   };
 });
-function render() {
-  placeInfo.forEach(renderCard);
+
+function renderCard({ title, link }) {
+  const placeTemplate = gridTemplate.querySelector(".element").cloneNode(true);
+  placeTemplate.querySelector(".element__title").textContent = title;
+  placeTemplate.querySelector(".element__photo").src = link;
+  placeTemplate.querySelector(".element__photo").alt = title;
+  gridContainer.prepend(placeTemplate);
 }
-function renderCard({ name, link }) {
-  const placeElement = gridTemplate.querySelector(".element").cloneNode(true);
-  placeElement.querySelector(".element__title").textContent = name;
-  placeElement.querySelector(".element__photo").src = link;
-  placeElement.querySelector(".element__photo").alt = name;
-  gridContainer.prepend(placeElement);
+function addCards() {
+  cardCollection.forEach(renderCard);
 }
-render();
+
+addCards();
 
 // функция добавления карточки
 function addImage(titleValue, linkValue) {
