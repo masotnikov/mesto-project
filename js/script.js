@@ -46,8 +46,7 @@ profileButton.addEventListener("click", () => {
   popupOpen(popupProfile);
 });
 
-
-// Обработчик формы «отправки» 
+// Обработчик формы «отправки»
 const formProfile = document.querySelector(".popup__form");
 
 function handlerProfile(evt) {
@@ -56,9 +55,7 @@ function handlerProfile(evt) {
   profileName.textContent = nameInput.value;
   profileAbout.textContent = jobInput.value;
 
-
   closePopupAll();
-
 }
 
 formProfile.addEventListener("submit", handlerProfile);
@@ -68,8 +65,6 @@ const popupImage = document.querySelector("#popup-image");
 addImageButton.addEventListener("click", () => {
   popupOpen(popupImage);
 });
-
-
 
 //карточки из коробки
 const gridContainer = document.querySelector(".elements");
@@ -122,17 +117,17 @@ function addImage(titleValue, linkValue) {
 
 //функция удаления карточки
 
-const buttonTrash = document.querySelectorAll(".element__trash");
-for (let i = 0; i < buttonTrash.length; i++) {
-  buttonTrash[i].addEventListener("click", function (evt) {
+const buttonsTrash = document.querySelectorAll(".element__trash");
+for (let i = 0; i < buttonsTrash.length; i++) {
+  buttonsTrash[i].addEventListener("click", function (evt) {
     evt.target.closest(".element").remove();
   });
 }
 
 //переключение лайков/дизлайков
-let buttonLike = document.querySelectorAll(".element__like");
-for (let i = 0; i < buttonLike.length; i++) {
-  buttonLike[i].addEventListener("click", function (evt) {
+let buttonsLike = document.querySelectorAll(".element__like");
+for (let i = 0; i < buttonsLike.length; i++) {
+  buttonsLike[i].addEventListener("click", function (evt) {
     evt.target.classList.toggle("element__like_active");
   });
 }
@@ -157,15 +152,17 @@ function handlerImage(evt) {
 formImage.addEventListener("submit", handlerImage);
 
 function openPhotoPopup() {
-  const gridElement = document.querySelectorAll(".element__photo");
+  const gridElements = document.querySelectorAll(".element__photo");
   const popupPhoto = document.querySelector("#popup-photo");
   const photoImage = document.querySelector(".photo__image");
-
-  for (let i = 0; i < gridElement.length; i++) {
-    gridElement[i].addEventListener("click", function (evt) {
+  const textCaption = document.querySelector(".photo__caption");
+  for (let i = 0; i < gridElements.length; i++) {
+    gridElements[i].addEventListener("click", function (evt) {
       const srcElem = evt.target.src;
-        popupPhoto.classList.add("popup_opened");
-        photoImage.src = srcElem;
+      const altElem = evt.target.alt;
+      photoImage.src = srcElem;
+      textCaption.textContent = altElem;
+      popupPhoto.classList.add("popup_opened");
     });
   }
   closePopupAll();
@@ -173,21 +170,20 @@ function openPhotoPopup() {
 
 openPhotoPopup();
 
+/* Функция закрывающая модальные окна */
 function closePopupAll() {
-  let allButtonClose = document.querySelectorAll('.popup__close');
-  let allSaveButton = document.querySelectorAll('.popup__button');
+  let allButtonClose = document.querySelectorAll(".popup__close");
+  let allSaveButton = document.querySelectorAll(".popup__button");
   for (let i = 0; i < allSaveButton.length; i++) {
-    allSaveButton[i].addEventListener('click', function (evt) {
-      evt.target.closest('.popup').classList.remove("popup_opened");
-    })
+    allSaveButton[i].addEventListener("click", function (evt) {
+      evt.target.closest(".popup").classList.remove("popup_opened");
+    });
   }
   for (let i = 0; i < allButtonClose.length; i++) {
-    allButtonClose[i].addEventListener('click', function (evt) {
-      evt.target.closest('.popup').classList.remove("popup_opened");
-    })
+    allButtonClose[i].addEventListener("click", function (evt) {
+      evt.target.closest(".popup").classList.remove("popup_opened");
+    });
   }
 }
 
 closePopupAll();
-
-
