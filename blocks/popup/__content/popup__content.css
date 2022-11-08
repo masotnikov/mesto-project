@@ -12,3 +12,9 @@
     padding: 25px 22px 25px 22px;
   }
 }
+@media screen and (max-width: 440px) {
+  .popup__content {
+    min-width: min(430px, 88.5vw);
+
+  }
+}
