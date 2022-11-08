@@ -47,7 +47,7 @@ profileButton.addEventListener("click", () => {
 });
 
 
-// Обработчик «отправки» формы
+// Обработчик формы «отправки» 
 const formProfile = document.querySelector(".popup__form");
 
 function handlerProfile(evt) {

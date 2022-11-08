@@ -53,6 +53,5 @@
 /* секция popup Photo */
 
 @import url(../blocks/photo/photo.css);
-
 @import url(../blocks/photo/__figure/photo__figure.css);
 @import url(../blocks/photo/__image/photo__image.css);
