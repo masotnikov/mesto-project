@@ -25,28 +25,28 @@ const initialCards = [
   },
 ];
 
-const addImageButton = document.querySelector(".profile__wide-button");
-const profileName = document.querySelector(".profile__name");
-const profileAbout = document.querySelector(".profile__description");
 
-const nameInput = document.querySelector(".popup__inpute-name");
-const jobInput = document.querySelector(".popup__inpute-about");
 
-//открытие попап профайл
+//открытие попап Profile
 const popupProfile = document.querySelector("#popup-profile");
 
 function popupOpen(popup) {
   popup.classList.add("popup_opened");
 }
 const profileButton = document.querySelector(".profile__button");
+const profileName = document.querySelector(".profile__name");
+const nameInput = document.querySelector(".popup__inpute-name");
+const jobInput = document.querySelector(".popup__inpute-about");
+const profileAbout = document.querySelector(".profile__description");
 
+//кнопка попап Profile
 profileButton.addEventListener("click", () => {
   nameInput.value = profileName.textContent;
   jobInput.value = profileAbout.textContent;
   popupOpen(popupProfile);
 });
 
-// Обработчик формы «отправки»
+// Обработчик формы «отправки» Profile
 const formProfile = document.querySelector(".popup__form");
 
 function handlerProfile(evt) {
@@ -61,6 +61,7 @@ function handlerProfile(evt) {
 formProfile.addEventListener("submit", handlerProfile);
 
 //открытие попап addImage
+const addImageButton = document.querySelector(".profile__wide-button");
 const popupImage = document.querySelector("#popup-image");
 addImageButton.addEventListener("click", () => {
   popupOpen(popupImage);
@@ -89,7 +90,7 @@ function addCards() {
 
 addCards();
 
-// функция добавления карточки
+// функция добавления картинки
 function addImage(titleValue, linkValue) {
   const gridContainer = document.querySelector(".elements");
   const gridTemplate = document.querySelector("#grid-template").content;
@@ -132,7 +133,7 @@ for (let i = 0; i < buttonsLike.length; i++) {
   });
 }
 
-// обработчик формы добавления картинок
+//обработчик формы добавления картинок
 
 const formImage = document.querySelector(".popup__form-image");
 
@@ -150,6 +151,8 @@ function handlerImage(evt) {
 }
 
 formImage.addEventListener("submit", handlerImage);
+
+//функция открытия попап Photo
 
 function openPhotoPopup() {
   const gridElements = document.querySelectorAll(".element__photo");
@@ -170,7 +173,7 @@ function openPhotoPopup() {
 
 openPhotoPopup();
 
-/* Функция закрывающая модальные окна */
+// Функция закрывающая модальные окна
 function closePopupAll() {
   let allButtonClose = document.querySelectorAll(".popup__close");
   let allSaveButton = document.querySelectorAll(".popup__button");
